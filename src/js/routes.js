@@ -35,27 +35,6 @@ define([
 		},
 		'superHome': function() {
 			mediator.publish("vModule",'superHome');
-		},
-		'academic': function() {
-			mediator.publish("vModule",'academic');
-		},
-		'advanced': function() {
-			mediator.publish("vModule",'advanced');
-		},
-		'student': function() {
-			mediator.publish("vModule",'student');
-		},
-		'ewol': function() {
-			mediator.publish("vModule",'ewol');
-		},
-		'academic/secondpage': function() {
-			mediator.publish("vModule",'secondpage');
-		},
-		'academic/thirdpage': function() {
-			mediator.publish("vModule",'thirdpage');
-		},
-		'academic/academic': function() {
-			mediator.publish("vModule",'academic');
-		},
+		}
 	});
 });

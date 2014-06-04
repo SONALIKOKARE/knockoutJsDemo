@@ -32,7 +32,7 @@ require.config({
         },
         'backbone':{
             deps:['jquery','underscore']
-        }
+        },
     }
 });
 
