@@ -4,7 +4,7 @@ define([
 	"backbone",
 	"less!../../../../../../../less/superHome"
 ],function(superHomeTemplate, mediator){
-	var self;
+	var self,viewModel;
 	return function(){
 		this.render = function() {
 			self = this;
@@ -12,15 +12,20 @@ define([
 			self._addEvent();
 		},
 		this._addEvent = function(){
-			var viewModel = {
-				firstName:ko.observable("sch"),
-				lastName:ko.observable("kokare")
-			};
-			//console.log(viewModel.firstName);
 
+			viewModel = {
+				firstText:ko.observable("My"),
+				lastText:ko.observable("Goddd"),
+				firstName:"sonali",
+				lastName:"kokare"
+			};
+			viewModel.jointText = ko.dependentObservable(function(){
+				console.log(viewModel)
+				return this.firstText()+"  "+this.lastText();
+			},viewModel);
 			viewModel.fullName = ko.dependentObservable(function(){
 				console.log(viewModel)
-				return "amit kokare"+viewModel.firstName;
+				return this.firstName+"  "+this.lastName;
 			},viewModel);
 
 			ko.applyBindings(viewModel);

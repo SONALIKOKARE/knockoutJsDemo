@@ -1,22 +1,3 @@
-How to use Backbone:
+How to use knockout:
 
-Follow below Steps:
-
-1. Create View:
-
-	a. Create object of backbone view as DirectoryView and also create instance of that object:	
-		
-		var DirectoryView = Backbone.View.extend({});
-
-		var directory = new DirectoryView();
-
-	b. Now, In DirectoryView object create instance of object Directory for the 	collection and then attach it to the model, for that cerate model object 
-
-		var contact = Backbone.Model.extend({
-	    	defaults:{
-	    		'photo': 'assets/superHome/contactThumbnail.png'
-	    	}
-	    });
-		var Directory = Backbone.Collection.extend({
-			model:contact
-		});
+	1.	Demo: http://jsfiddle.net/sonalikokare/Zkq9h/
