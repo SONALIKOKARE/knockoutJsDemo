@@ -16,7 +16,22 @@
 <script id="friendsTemplate" type="text/html">
 	<ul>
 		{{each(index,friend) friends}}
-			<li> ${friend.name} </li>
+			<li> 
+				${friend.name} 
+			</li>
 		{{/each}}
 	</ul>
 </script>
+<button data-bind="click: addFriend">Add friend</button>
+
+<h3>My Friends: Using jQuery  Dynamic templating</h3>
+<div data-bind="template: {name:'classmateAddTemplate', foreach:classmates}"></div>
+
+<script id="classmateAddTemplate" type="text/html">
+	<li>${$data.name}- ${new Date} </li>
+	<li>
+		${$data.name}
+		<button data-bind="click: removeClassmate">remove</button>		
+	</li>
+</script>
+<button data-bind="click: addClassmate">Add classmate</button>
