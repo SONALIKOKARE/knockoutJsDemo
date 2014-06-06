@@ -9,3 +9,14 @@
 <div>first Name:<input data-bind="value:firstText"/></div>
 <div>last Name:<input data-bind="value:lastText"/></div>
 <div>full Name:<span data-bind="text:jointText"></span></div>
+
+<h3>My Friends: Using jQuery templating</h3>
+<div data-bind="template: 'friendsTemplate'"></div>
+
+<script id="friendsTemplate" type="text/html">
+	<ul>
+		{{each(index,friend) friends}}
+			<li> ${friend.name} </li>
+		{{/each}}
+	</ul>
+</script>

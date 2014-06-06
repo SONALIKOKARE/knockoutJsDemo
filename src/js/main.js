@@ -12,6 +12,7 @@ require.config({
         'mediator':'mediator',
         'text':'text',
         'css':'css.min',
+        'jqueryTmplt':'jquery.tmpl',
         'scrollto':'jquery-scrollto',
         'handlebars':'handlebars-v1.3.0',
         'bxslider':'jquery.bxslider',
@@ -33,6 +34,9 @@ require.config({
         'backbone':{
             deps:['jquery','underscore']
         },
+        'jqueryTmplt':{
+            deps:['jquery']
+        }
     }
 });
 
