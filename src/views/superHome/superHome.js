@@ -22,7 +22,18 @@ define([
 				return {
 					name:ko.observable(name),
 					removeClassmate: function(){
-						console.log('dfsdf');
+						console.log('in classmate');
+						viewModel.classmates.remove(this);
+					}
+				};
+			}
+			function twittermate(name){
+				console.log(name);
+				return {
+					name:ko.observable(name),					
+					isTwitterOn:ko.observable(false),
+					removeClassmate: function(){
+						console.log('in twittermate');
 						viewModel.classmates.remove(this);
 					}
 				};
@@ -40,6 +51,7 @@ define([
 				addClassmate: function(){
 					this.classmates.push(new classmate("mangesh"))
 				},
+				twittermates:ko.observableArray([new twittermate('soni'), new twittermate('sch'), new twittermate('bun')]),
 			};
 			viewModel.jointText = ko.dependentObservable(function(){
 				console.log(viewModel)

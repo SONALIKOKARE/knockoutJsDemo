@@ -22,7 +22,7 @@
 		{{/each}}
 	</ul>
 </script>
-<button data-bind="click: addFriend">Add friend</button>
+<button data-bind="click: addFriend, enable: friends().length < 5" >Add friend</button>
 
 <h3>My Friends: Using jQuery  Dynamic templating</h3>
 <div data-bind="template: {name:'classmateAddTemplate', foreach:classmates}"></div>
@@ -35,3 +35,17 @@
 	</li>
 </script>
 <button data-bind="click: addClassmate">Add classmate</button>
+
+
+
+
+<h3>My Friends: Using jQuery  Dynamic templating</h3>
+<div data-bind="template: {name:'twitterTemplate', foreach:twittermates}"></div>
+
+<script id="twitterTemplate" type="text/html">
+	<li>
+		<input type="checkbox" data-bind="checked: isTwitterOn"/>
+		${$data.name}	
+		<lable><input data-bind="value:'sonali', visible: isTwitterOn " /></lable>	
+	</li>
+</script>
